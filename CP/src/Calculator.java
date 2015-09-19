@@ -7,15 +7,15 @@ public class Calculator {
     public static void main(String[] args) {
         Scanner scanner;
         ComProcessor processor = new ComProcessor();
-        if (args[0].isEmpty()){
-            scanner = new Scanner(System.in);
+        if (args.length > 0){
+            scanner = new Scanner(args[0]);
         }
         else {
-            scanner = new Scanner(args[0]);
+            scanner = new Scanner(System.in);
         }
 
         while (scanner.hasNext()){
-            String strCommand = scanner.next();
+            String strCommand = scanner.nextLine();
             if (strCommand.equals("EXIT")){
                 break;
             };

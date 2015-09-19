@@ -1,6 +1,4 @@
-import java.util.Map;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * Created by Bek on 19.09.2015.
@@ -11,6 +9,9 @@ public class ComProcessor {
     public Map<String, Double> dvars;
 
     ComProcessor(){
+        cmds = new HashMap();
+        stack = new Stack();
+        dvars = new HashMap();
         cmds.put("ADD", new AddCmd());
         cmds.put("MILT", new MultiCmd());
         cmds.put("MINUS", new MinusCmd());
@@ -18,7 +19,6 @@ public class ComProcessor {
         cmds.put("PUSH", new PushCmd());
         cmds.put("PRINT", new PrintCmd());
         cmds.put("DEFINE", new DefineCmd());
-
     }
 
     public void proceedCommand(String incmd){
