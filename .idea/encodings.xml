@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/CP/src/Calculator.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/CP/src/ComProcessor.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CP/src/DefineCmd.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CP/src/DivCmd.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CP/src/Messager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CP/src/MinusCmd.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CP/src/MultiCmd.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CP/src/PopCmd.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CP/src/PrintCmd.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CP/src/PushCmd.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CP/src/SqrtCmd.java" charset="UTF-8" />
   </component>
 </project>
