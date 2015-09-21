@@ -8,6 +8,12 @@ public class PushCmd implements Command {
 
     @Override
     public void execute(Stack<Double> stack, Map<String, Double> dvars, String[] args) {
-        stack.push(Double.valueOf(args[1]));
+        Double curarg = dvars.get(args[1]);
+        if (curarg == null) {
+            stack.push(Double.valueOf(args[1]));
+        }
+        else {
+            stack.push(curarg);
+        }
     }
 }
