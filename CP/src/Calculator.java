@@ -11,13 +11,8 @@ public class Calculator {
         ComProcessor processor = new ComProcessor();
 
         if (args.length > 0){
-            StringBuilder sb = new StringBuilder();
-            for (String ss:args) {
-                sb.append(ss);
-                sb.append(" ");
-            }
             try {
-                scanner = new Scanner(new File(sb.toString()));
+                scanner = new Scanner(new File(String.join(" ", args)));
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
