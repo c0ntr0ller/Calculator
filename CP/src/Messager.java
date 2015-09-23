@@ -5,7 +5,7 @@ public class Messager {
     public static void msgCustom(String msg){
         System.out.println(msg);
     }
-    public static void msgInvalidCommand(){
-        System.out.println("Invalid command, try again");
+    public static void msgInvalidCommand(String cmdName){
+        System.out.println("Invalid command: " + cmdName);
     }
 }

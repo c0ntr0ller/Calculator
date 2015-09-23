@@ -20,16 +20,15 @@ public class ComProcessor {
         cmds.put("PRINT", new PrintCmd());
         cmds.put("DEFINE", new DefineCmd());
         cmds.put("SQRT", new SqrtCmd());
-        cmds.put("POP", new PopCmd());
         cmds.put("CLEAR", new ClearCmd());
     }
 
     public void proceedCommand(String incmd){
         String[] args = incmd.split(" ");
-        if (!args[0].equals("#")) {
+        if (!args[0].equals("#") && !args[0].isEmpty()) {
             Command c = cmds.get(args[0]);
             if (c == null) {
-                Messager.msgInvalidCommand();
+                Messager.msgInvalidCommand(args[0]);
             } else {
                 c.execute(stack, dvars, args);
             }
