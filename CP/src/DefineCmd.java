@@ -12,5 +12,6 @@ public class DefineCmd implements Command {
             dvars.remove(args[1]);
         }
         dvars.put(args[1], Double.valueOf(args[2]));
+
     }
 }
