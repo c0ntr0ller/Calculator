@@ -16,15 +16,13 @@ public class FileWordCounter {
     public static void main(String[] args) throws FileNotFoundException {
         String inFileName;
         inFileName = String.join(" ", args);
-
-
+        int total_count = 0;
         try (Reader r = new InputStreamReader(new BufferedInputStream(new FileInputStream(inFileName)))) {
 
             Map<String, Integer> fWords = new HashMap<String, Integer>();
 
             int curReadChar;
             StringBuilder sb = new StringBuilder();
-            String curWord = null;
             while ((curReadChar = r.read()) != -1){
 
                 char cChar = (char) curReadChar;
@@ -33,17 +31,20 @@ public class FileWordCounter {
                 }
                 else
                 {
-                    curWord = sb.toString();
-                    putWord(fWords, curWord);
+                    putWord(fWords, sb.toString());
                     sb.setLength(0);
+                    total_count++;
                 }
             }
-            putWord(fWords, curWord);
+            if (sb.length() > 0){
+                putWord(fWords, sb.toString());
+                total_count++;
+            }
 
             class myComparator implements Comparator<Map.Entry<String, Integer>> {
                 @Override
                 public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
-                    return o1.getValue() - o2.getValue();
+                    return o2.getValue() - o1.getValue();
                 }
             }
 
@@ -55,26 +56,17 @@ public class FileWordCounter {
 
             Collections.sort(fList, new myComparator());
 
+            try(Writer w = new OutputStreamWriter(new BufferedOutputStream(new FileOutputStream(inFileName + ".out")))) {
 
+                for (Map.Entry<String, Integer> mapEntry : fList) {
+                    w.write(mapEntry.getKey() + '\t' + "count:" + mapEntry.getValue() + '\t' + "percent:" + Math.round(mapEntry.getValue() * 100 / total_count) + "%" + "\r\n");
+                }
+                w.write("Total count" + total_count);
 
-//            fList.sort(Comparator<Map.Entry<String, Integer>> fWords.entrySet());
-
-//            fList.sort((Comparator<? super Comparator<Map.Entry<String, Integer>>>) fWords);
-
-            Writer w = new OutputStreamWriter(new BufferedOutputStream(new FileOutputStream(inFileName + ".out")));
-
-
-            for (Map.Entry<String, Integer> mapEntry : fList){
-//            for (Map.Entry<String, Integer> mapEntry: fWords.entrySet()) {
-                w.write(mapEntry.getKey() + " " + mapEntry.getValue() + "\n");
+                w.close();
             }
-
-            w.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-
     }
 }
