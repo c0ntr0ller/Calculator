@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/CP/src/Calculator.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/CP/src/ComProcessor.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/CP/src/DefineCmd.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/CP/src/DivCmd.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/CP/src/Messager.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/CP/src/MinusCmd.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/CP/src/MultiCmd.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/CP/src/PrintCmd.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/CP/src/PushCmd.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/CP/src/SqrtCmd.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ru/bek/calc/Calculator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ru/bek/calc/ComProcessor.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ru/bek/calc/ComProcessor2.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ru/bek/calc/DefineCmd.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ru/bek/calc/DivCmd.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ru/bek/calc/Messager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ru/bek/calc/MinusCmd.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ru/bek/calc/MultiCmd.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ru/bek/calc/PrintCmd.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ru/bek/calc/PushCmd.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ru/bek/calc/SqrtCmd.java" charset="UTF-8" />
   </component>
 </project>

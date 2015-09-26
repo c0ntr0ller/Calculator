@@ -1,5 +1,5 @@
 import junit.framework.TestCase;
-import sun.applet.Main;
+import ru.bek.calc.myMain;
 
 /**
  * Created by Bek on 24.09.2015.
@@ -13,7 +13,7 @@ public class FirstTest extends TestCase {
         super.tearDown();
     }
     public void testMaxInt()throws Exception{
-        int result = myMain.maxInt(1,3);
+        int result = myMain.maxInt(1, 3);
         assertEquals(3, result);
     }
 

@@ -1,3 +1,5 @@
+package ru.bek.calc;
+
 import java.util.*;
 
 /**

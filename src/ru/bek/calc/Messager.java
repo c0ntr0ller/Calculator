@@ -1,3 +1,5 @@
+package ru.bek.calc;
+
 /**
  * Created by Bek on 21.09.2015.
  */

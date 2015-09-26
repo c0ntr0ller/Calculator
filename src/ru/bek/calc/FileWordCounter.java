@@ -1,3 +1,5 @@
+package ru.bek.calc;
+
 import com.sun.org.apache.xml.internal.security.utils.JavaUtils;
 
 import java.io.*;
@@ -14,8 +16,7 @@ public class FileWordCounter {
         mMap.put(mString, cnt);
     }
     public static void main(String[] args) throws FileNotFoundException {
-        String inFileName;
-        inFileName = String.join(" ", args);
+        String inFileName = String.join(" ", args);
         int total_count = 0;
         try (Reader r = new InputStreamReader(new BufferedInputStream(new FileInputStream(inFileName)))) {
 
@@ -44,7 +45,11 @@ public class FileWordCounter {
             class myComparator implements Comparator<Map.Entry<String, Integer>> {
                 @Override
                 public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
-                    return o2.getValue() - o1.getValue();
+                    int res = o2.getValue().compareTo(o1.getValue());
+                    if (res == 0){
+                        res = o2.getKey().compareTo(o1.getKey());
+                    }
+                    return res;
                 }
             }
 

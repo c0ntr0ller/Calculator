@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CP/CP.iml" filepath="$PROJECT_DIR$/CP/CP.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ru.bekandrew.calc.iml" filepath="$PROJECT_DIR$/ru.bekandrew.calc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/calc.iml" filepath="$PROJECT_DIR$/calc.iml" />
     </modules>
   </component>
 </project>
