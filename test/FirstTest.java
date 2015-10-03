@@ -1,10 +1,13 @@
 import junit.framework.TestCase;
 import ru.bek.calc.myMain;
 
+import java.lang.reflect.Method;
+
 /**
  * Created by Bek on 24.09.2015.
  */
 public class FirstTest extends TestCase {
+
     public void setUp() throws Exception{
         super.setUp();
     }
